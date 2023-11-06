@@ -33,22 +33,22 @@ const API_KEY = 'TWÓJ_KLUCZ_API'; // Wprowadź swój klucz API themoviedb.org
 
 ## Użycie
 
--Strona główna wyświetla listę najpopularniejszych filmów dzisiaj.
--Strona "Movies" umożliwia wyszukiwanie filmów po słowie kluczu.
--Po kliknięciu na film na liście lub wynik wyszukiwania, użytkownik zostaje przeniesiony na stronę z szczegółowymi informacjami o filmie.
--Na stronie z informacjami o filmie dostępne są zakładki "Cast" i "Reviews" z dodatkowymi informacjami.
+- Strona główna wyświetla listę najpopularniejszych filmów dzisiaj.
+- Strona "Movies" umożliwia wyszukiwanie filmów po słowie kluczu.
+- Po kliknięciu na film na liście lub wynik wyszukiwania, użytkownik zostaje przeniesiony na stronę z szczegółowymi informacjami o filmie.
+- Na stronie z informacjami o filmie dostępne są zakładki "Cast" i "Reviews" z dodatkowymi informacjami.
 
 ## Struktura projektu
 
-/src - główny katalog projektu.
-/components - komponenty React.
-/api - funkcje do obsługi zapytań do themoviedb.org API.
-App.js - komponent główny obsługujący routing.
-index.js - plik startowy aplikacji.
+- /src - główny katalog projektu.
+- /components - komponenty React.
+- /api - funkcje do obsługi zapytań do themoviedb.org API.
+- App.js - komponent główny obsługujący routing.
+- index.js - plik startowy aplikacji.
 
 ## Stylizacja
 
-Stylizacja komponentów jest realizowana za pomocą CSS-modułów i Styled Components. Możesz dostosować stylizację według własnych preferencji, modyfikując odpowiednie pliki CSS.
+Stylizacja komponentów jest realizowana za pomocą CSS-modułów. Możesz dostosować stylizację według własnych preferencji, modyfikując odpowiednie pliki CSS.
 
 ## Autor
 
