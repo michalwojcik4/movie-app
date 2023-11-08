@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 import { searchMovies } from '../../api/api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import { SearchTerm } from 'components/SearchTerm/SearchTerm';
+
+import css from './Movie.module.css'
+
+export const TermContext = createContext();
 
 export function Movies() {
-  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = e => {
     e.preventDefault();
@@ -15,18 +20,14 @@ export function Movies() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSearch}>
-        <button type="submit">Search</button>
-        <input
-          type="text"
-          autoComplete="off"
-          autoFocus
-          placeholder="Search for a movie..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-        />
-      </form>
+    <div className={css.conteiner}>
+      <TermContext.Provider
+        value={{
+          searchTerm,
+          setSearchTerm,
+          handleSearch,
+        }}
+      ><SearchTerm/></TermContext.Provider>
       <MoviesList data={searchResults} />
     </div>
   );
