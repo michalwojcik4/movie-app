@@ -1,0 +1,37 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 200px;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    color:black;
+    font-weight: 500;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    background-color: rgb(72, 103, 195);
+    color: #fff;
+}
+
+.nav__logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav__logo > span {
+    color: rgb(72, 103, 195);
+}
