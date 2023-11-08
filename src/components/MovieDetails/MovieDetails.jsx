@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, Outlet} from 'react-router-dom';
-import {getMovieDetails} from '../../api/api';
+import { Link, useParams, Outlet } from 'react-router-dom';
+import { getMovieDetails } from '../../api/api';
+
+import { Loader } from 'components/Loader/Loader';
 
 export function MovieDetails() {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
 
-
   useEffect(() => {
-    getMovieDetails(movieId).then((data) => {
+    getMovieDetails(movieId).then(data => {
       setMovieDetails(data);
     });
   }, [movieId]);
@@ -24,7 +25,7 @@ export function MovieDetails() {
           <Outlet />
         </div>
       ) : (
-        <div>Loading...</div>
+        <Loader/>
       )}
     </div>
   );

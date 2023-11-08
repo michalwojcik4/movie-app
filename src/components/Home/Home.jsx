@@ -4,6 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import { getTrendingMovies } from '../../api/api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import { Loader } from 'components/Loader/Loader';
 
 export function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -27,10 +28,10 @@ export function Home() {
 
   return (
     <InfiniteScroll
-      dataLength={trendingMovies.length} // Liczba elementów w liście
-      next={() => loadMore()} // Funkcja do wywołania, gdy trzeba wczytać więcej elementów
-      hasMore={true} // Jeśli ma być więcej elementów do wczytania
-      loader={<h4>Loading...</h4>} // Komunikat ładowania
+      dataLength={trendingMovies.length}
+      next={() => loadMore()}
+      hasMore={true}
+      loader={<Loader/>}
     >
       <MoviesList data={trendingMovies} />
     </InfiniteScroll>
