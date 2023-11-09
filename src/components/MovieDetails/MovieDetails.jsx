@@ -20,12 +20,20 @@ export function MovieDetails() {
     <div>
       {movieDetails ? (
         <div className={css.box}>
+          <NavLink className={css.go_back} to={'/movies'}>Go back</NavLink>
           <div className={css.details}>
-            <img
-              className={css.details__img}
-              src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
-              alt={movieDetails.title}
-            />
+            {movieDetails.poster_path ? (
+              <img
+                className={css.details__img}
+                src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
+                alt={movieDetails.title}
+              />
+            ) : (
+              <div className={css.list__noimg}>
+                <p>No Image</p>
+              </div>
+            )}
+
             <div className={css.details__context}>
               <h2>
                 {movieDetails.title}{' '}

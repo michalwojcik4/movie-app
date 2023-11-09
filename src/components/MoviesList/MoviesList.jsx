@@ -8,7 +8,9 @@ export function MoviesList({ data }) {
   return (
     <ul className={css.list}>
       {data.map(movie => (
-        <Link key={movie.id} to={`/movies/${movie.id}`}><MovieItem movie={movie} /></Link>
+        <Link key={movie.id} to={`/movies/${movie.id}`}>
+          <MovieItem movie={movie} />
+        </Link>
       ))}
     </ul>
   );

@@ -39,6 +39,7 @@
     border-radius: 3px;
     color:black;
     font-weight: 500;
+    border: 0.5px solid rgb(72, 103, 195);
 }
 
 .more_info_list__link:hover,
@@ -46,3 +47,22 @@
     background-color: rgb(72, 103, 195);
     color: #fff;
 }
+
+.list__noimg {
+    border: 1px solid;
+    width: 250px;
+    height: 350px;
+  }
+
+  .list__noimg > p{
+    margin: 100px;
+  }
+
+  .go_back {
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 3px;
+    color:black;
+    font-weight: 500;
+    border: 0.5px solid rgb(72, 103, 195);
+  }

@@ -13,7 +13,7 @@ export function Reviews() {
       setReviews(data.results);
     });
   }, [movieId]);
-  console.log(reviews);
+
   return (
     <>
       {reviews.length !== 0 ? (
@@ -30,7 +30,7 @@ export function Reviews() {
           </ul>
         </div>
       ) : (
-        <div>nic</div>
+        <div><p>Sorry, No reviews on this film.</p></div>
       )}
     </>
   );
