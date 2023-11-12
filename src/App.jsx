@@ -7,8 +7,8 @@ const Movies = React.lazy(() => import('./components/Movies/Movies'));
 const MovieDetails = React.lazy(() =>
   import('./components/MovieDetails/MovieDetails')
 );
-// const Cast = React.lazy(() => import('./components/Cast/Cast'));
-// const Reviews = React.lazy(() => import('./components/Reviews/Reviews'));
+const Cast = React.lazy(() => import('./components/Cast/Cast'));
+const Reviews = React.lazy(() => import('./components/Reviews/Reviews'));
 
 export const App = () => {
   return (
@@ -17,7 +17,10 @@ export const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="movies" element={<Movies />} />
-          <Route path="movies/:movieId" element={<MovieDetails />} />
+          <Route path="movies/:movieId" element={<MovieDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
         </Route>
         <Route path="*" element={<SharedLayout />} />
       </Routes>

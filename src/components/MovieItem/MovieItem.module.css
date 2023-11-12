@@ -13,7 +13,6 @@
 
 .list__item > img:hover {
   transform: scale(1.03);
-  cursor: zoom-in;
 }
 
 .list__noimg {

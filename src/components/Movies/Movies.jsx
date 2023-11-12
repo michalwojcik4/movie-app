@@ -26,6 +26,7 @@ const Movies = () => {
     e.preventDefault();
     if (searchTerm === '') return;
     setSearchParams({ query: searchTerm });
+    setSearchResults([]);
   };
 
   useEffect(() => {
