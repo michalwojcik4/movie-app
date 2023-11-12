@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import css from './Nav.module.css';
 
-const Nav = () => {
+export const Nav = () => {
   return (
     <nav className={css.nav}>
       <p className={css.nav__logo}>
@@ -41,5 +41,3 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;

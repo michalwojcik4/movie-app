@@ -3,7 +3,7 @@ import { TermContext } from '../Movies/Movies';
 
 import css from './SearchTerm.module.css';
 
-const SearchTerm = () => {
+export const SearchTerm = () => {
   const { handleSearch, searchTerm, setSearchTerm } = useContext(TermContext);
   return (
     <form onSubmit={handleSearch} className={css.form}>
@@ -22,5 +22,3 @@ const SearchTerm = () => {
     </form>
   );
 };
-
-export default SearchTerm;

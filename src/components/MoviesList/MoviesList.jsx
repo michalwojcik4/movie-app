@@ -2,7 +2,7 @@ import { MovieItem } from 'components/MovieItem/MovieItem';
 
 import css from './MovieList.module.css';
 
-const MoviesList = ({ data }) => {
+export const MoviesList = ({ data }) => {
   return (
     <ul className={css.list}>
       {data.map(movie => (
@@ -11,5 +11,3 @@ const MoviesList = ({ data }) => {
     </ul>
   );
 };
-
-export default MoviesList;
