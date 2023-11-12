@@ -6,7 +6,7 @@ import { getTrendingMovies } from '../../api/api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 
-export function Home() {
+const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -31,9 +31,11 @@ export function Home() {
       dataLength={trendingMovies.length}
       next={() => loadMore()}
       hasMore={true}
-      loader={<Loader/>}
+      loader={<Loader />}
     >
       <MoviesList data={trendingMovies} />
     </InfiniteScroll>
   );
-}
+};
+
+export default Home;
