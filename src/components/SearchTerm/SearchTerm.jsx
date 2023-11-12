@@ -3,13 +3,15 @@ import { TermContext } from '../Movies/Movies';
 
 import css from './SearchTerm.module.css';
 
-export function SearchTerm() {
+const SearchTerm = () => {
   const { handleSearch, searchTerm, setSearchTerm } = useContext(TermContext);
   return (
     <form onSubmit={handleSearch} className={css.form}>
-      <button type="submit" className={css.form__button}>Search</button>
+      <button type="submit" className={css.form__button}>
+        Search
+      </button>
       <input
-      className={css.form__input}
+        className={css.form__input}
         type="text"
         autoComplete="off"
         autoFocus
@@ -19,4 +21,6 @@ export function SearchTerm() {
       />
     </form>
   );
-}
+};
+
+export default SearchTerm;
