@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { NavLink, useLocation } from 'react-router-dom';
 
 import css from './MovieItem.module.css';
@@ -19,4 +20,8 @@ export const MovieItem = ({ movie }) => {
       </li>
     </NavLink>
   );
+};
+
+MovieItem.propTypes = {
+  movie: PropTypes.object,
 };

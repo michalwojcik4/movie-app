@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { MovieItem } from 'components/MovieItem/MovieItem';
 
 import css from './MovieList.module.css';
@@ -10,4 +12,8 @@ export const MoviesList = ({ data }) => {
       ))}
     </ul>
   );
+};
+
+MoviesList.propTypes = {
+  data: PropTypes.array,
 };

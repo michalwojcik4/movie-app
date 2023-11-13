@@ -17,11 +17,10 @@ const MovieDetails = () => {
     });
   }, [movieId]);
 
-  console.log(movieDetails)
   return (
     <div className={css.container}>
       <NavLink
-        /*to={location.state.from}*/ 
+        /*to={location.state.from}*/
         className={css.more_info_list__link}
       >
         Go back
@@ -46,7 +45,9 @@ const MovieDetails = () => {
                 {movieDetails.title}{' '}
                 <span>({movieDetails.release_date.slice(0, 4)})</span>
               </h2>
-              <p className={css.details__vote}>{Math.round(movieDetails.vote_average *10)/10}</p>
+              <p className={css.details__vote}>
+                {Math.round(movieDetails.vote_average * 10) / 10}
+              </p>
               <h3>Overview</h3>
               <p>{movieDetails.overview}</p>
               <h3>Genres</h3>
