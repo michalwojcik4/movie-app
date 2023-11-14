@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, NavLink, Outlet /*useLocation*/ } from 'react-router-dom';
+import { useParams, NavLink, Outlet } from 'react-router-dom';
 import { getMovieDetails } from '../../api/api';
 
 import { Loader } from 'components/Loader/Loader';
@@ -7,7 +7,6 @@ import { Loader } from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
-  //   const location = useLocation();
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
 
@@ -19,12 +18,6 @@ const MovieDetails = () => {
 
   return (
     <div className={css.container}>
-      <NavLink
-        /*to={location.state.from}*/
-        className={css.more_info_list__link}
-      >
-        Go back
-      </NavLink>
       {movieDetails ? (
         <div className={css.box}>
           <div className={css.details}>
