@@ -18,7 +18,7 @@ jobs:
           npm run build
 
       - name: Set REACT_APP_API_KEY as environment variable 🗝️
-        run: echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> $GITHUB_ENV
+        run: echo "API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> $GITHUB_ENV
         
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
