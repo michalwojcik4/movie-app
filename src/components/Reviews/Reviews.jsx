@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getMovieReviews } from '../../api/api';
+import { useMovieAPI } from '../../api/api';
 
 import css from './Reviews.module.css';
 
 const Reviews = () => {
+  const { getMovieReviews } = useMovieAPI();
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
+  const [, setLoading] = useState(true);
+  const [, setError] = useState(null);
 
   useEffect(() => {
-    getMovieReviews(movieId).then(data => {
-      setReviews(data.results);
-    });
-  }, [movieId]);
+    setLoading(true);
+
+    getMovieReviews(movieId)
+      .then(data => {
+        setReviews(data.results);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError('Error fetching reviews');
+        setLoading(false);
+        console.error('Error fetching reviews:', error);
+      });
+  }, [getMovieReviews, movieId]);
 
   return (
     <>
@@ -30,10 +42,12 @@ const Reviews = () => {
           </ul>
         </div>
       ) : (
-        <div><p>Sorry, No reviews on this film.</p></div>
+        <div>
+          <p>Sorry, No reviews on this film.</p>
+        </div>
       )}
     </>
   );
-}
+};
 
 export default Reviews;

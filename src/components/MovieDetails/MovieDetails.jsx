@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink, Outlet } from 'react-router-dom';
-import { getMovieDetails } from '../../api/api';
+import { useMovieAPI } from '../../api/api';
 
 import { Loader } from 'components/Loader/Loader';
 
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
+  const { getMovieDetails } = useMovieAPI();
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
 
   useEffect(() => {
-    getMovieDetails(movieId).then(data => {
-      setMovieDetails(data);
-    });
-  }, [movieId]);
+    const fetchMovieDetails = async () => {
+      try {
+        const data = await getMovieDetails(movieId);
+        setMovieDetails(data);
+      } catch (error) {
+        console.error('Error fetching movie details:', error);
+      }
+    };
+
+    fetchMovieDetails();
+  }, [getMovieDetails, movieId]);
 
   return (
     <div className={css.container}>
