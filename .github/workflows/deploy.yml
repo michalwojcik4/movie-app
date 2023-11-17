@@ -22,3 +22,5 @@ jobs:
         with:
           branch: gh-pages
           folder: build
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
