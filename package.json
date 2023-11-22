@@ -2,7 +2,7 @@
   "name": "goit-react-hw-05-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://michalwojcik4.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://michalwojcik4.github.io/goit-react-hw-05-movies",
   "dependencies": {
     "axios": "^1.6.0",
     "prop-types": "^15.8.1",
