@@ -18,7 +18,7 @@ export const Nav = () => {
                 backgroundColor: props.isActive ? 'rgb(72, 103, 195)' : '#FFF',
               };
             }}
-            to="/goit-react-hw-05-movies"
+            to="/"
           >
             Home
           </NavLink>
