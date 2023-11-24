@@ -1,43 +1,75 @@
 .form {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 3px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.form__button {
+  display: inline-block;
+  height: 25px;
+  border: 0.5px solid rgb(72, 103, 195);
+  cursor: pointer;
+  outline: none;
+  border-radius: 3px;
+  color: black;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.form__button:hover,
+.form__button:focus {
+  background-color: rgb(72, 103, 195);
+  color: #fff;
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 4px;
+  border-bottom: 1px solid rgb(72, 103, 195);
+}
+
+.form__input::placeholder {
+  font: inherit;
+  font-size: 14px;
+}
+
+@media (min-width: 600px) {
+  .form {
+    max-width: 400px;
   }
 
-  .form__button {
-    display: inline-block;
-    height: 25px;
-    border: 0;
-    opacity: 0.6;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    outline: none;
-    background-color: rgb(72, 103, 195);
-    color:#fff;
-    font-size: 18px;
-  }
-
-  .form__button:hover {
-    opacity: 1;
+  .form__button,
+  .form__input {
+    font-size: 16px;
   }
 
   .form__input {
-    display: inline-block;
-    width: 100%;
-    font: inherit;
-    font-size: 19px;
-    border: none;
-    outline: none;
-    padding-left: 20px;
-    padding-right: 4px;
-    border-bottom: 1px solid rgb(72, 103, 195);
+    padding-left: 15px;
   }
-  
-  .form__input::placeholder {
-    font: inherit;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    max-width: 600px;
+  }
+
+  .form__button,
+  .form__input {
     font-size: 18px;
   }
+
+  .form__input {
+    padding-left: 20px;
+  }
+}

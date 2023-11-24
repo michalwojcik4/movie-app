@@ -52,7 +52,7 @@ const MovieDetails = () => {
               <h3>Overview</h3>
               <p>{movieDetails.overview}</p>
               <h3>Genres</h3>
-              <p>{movieDetails.genres.map(genre => genre.name).join(', ')}</p>
+              <p>{movieDetails.genres.map(genre => genre.name).join(' | ')}</p>
             </div>
           </div>
           <ul className={css.more_info_list}>

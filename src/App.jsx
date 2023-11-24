@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { SharedLayout } from 'components/SharedLayout/SharedLayout ';
+import ScrollToTopArrow from 'components/ScrollToTopArrow/ScrollToTopArrow';
+
 const Home = React.lazy(() => import('./components/Home/Home'));
 const Movies = React.lazy(() => import('./components/Movies/Movies'));
 const MovieDetails = React.lazy(() =>
@@ -24,6 +26,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<SharedLayout />} />
       </Routes>
+      <ScrollToTopArrow />
     </BrowserRouter>
   );
 };
