@@ -12,7 +12,7 @@ https://michalwojcik4.github.io/movie-app/
 ## Instalacja
 
 1. Sklonuj repozytorium: git clone
-   https://github.com/michalwojcik4/goit-react-hw-05-movies.git
+ https://github.com/michalwojcik4/movie-app.git
 
 2. Przejdź do katalogu projektu: cd goit-react-hw-05-movies
 
