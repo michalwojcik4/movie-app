@@ -7,7 +7,7 @@ o filmie, zespołu aktorskim i recenzjach.
 
 ## Demo
 
-https://michalwojcik4.github.io/goit-react-hw-05-movies/
+https://michalwojcik4.github.io/film-search-engine/
 
 ## Instalacja
 
