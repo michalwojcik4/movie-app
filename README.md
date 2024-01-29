@@ -7,7 +7,7 @@ o filmie, zespołu aktorskim i recenzjach.
 
 ## Demo
 
-https://michalwojcik4.github.io/film-search-engine/
+https://michalwojcik4.github.io/movie-app/
 
 ## Instalacja
 
